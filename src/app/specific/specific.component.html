@@ -1,0 +1,27 @@
+<div class="row" id="specificView">
+  <div class="mr-auto">
+    <div *ngIf="post">
+      <h4>{{ post.title }}</h4>
+    </div>
+  </div>
+
+  <button class="btn btn-standard" data-toggle="modal" data-target="#postModal" id="createReply">
+    <span class="oi oi-comment-square">&nbsp;</span>
+  </button>
+
+  <a [routerLink]="['../../']" class="btn btn-warning" (click)="viewCatalog()">
+    <span class="oi oi-share">&nbsp;</span>
+  </a>
+</div>
+
+<div class="row">
+  <div *ngFor="let reply of replies | async; trackBy: postTrackByFn; first as isFirst">
+    <div *ngIf="isFirst === true" class="col-sm-11">
+      <app-thread-item *ngIf="isFirst === true" [thread]="reply"></app-thread-item>
+    </div>
+
+    <div *ngIf="isFirst === false" class="list-group col-sm-11 offset-sm-1">
+        <app-thread-item [thread]="reply"></app-thread-item>
+    </div>
+  </div>
+</div>

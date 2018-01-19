@@ -1,0 +1,25 @@
+#catalogView {
+    margin-top: 20px;
+    padding-top: 1em;
+    background-color: #28283e;
+}
+
+hr {
+    border: 1px #0a0a10 dashed;
+}
+
+button {
+    background-color: #a0a0c5;
+    border-color: #a0a0c5;
+}
+
+button:hover {
+    background-color: #3a3a5f;
+    border-color: #3a3a5f;
+}
+
+button:active {
+    background-color: #46466d;
+    border-color: #46466d;
+}
+

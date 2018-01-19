@@ -1,0 +1,11 @@
+<div class="row" id="catalogView">
+  <div class="col-sm-12">
+    <button type="button" class="btn btn-standard col-sm-4 offset-sm-4" data-toggle="modal" data-target="#postModal">Create New Thread</button>
+    <hr>
+  </div>
+  <div *ngFor="let thread of threads | async; trackBy: postTrackByFn" class="col-sm-4">
+    <a [routerLink]="['post/', thread.postID]" (click)="viewSpecific(thread.postID)">
+      <app-thread-item [thread]="thread"></app-thread-item>
+    </a>
+  </div>
+</div>

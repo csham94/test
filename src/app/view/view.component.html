@@ -1,0 +1,8 @@
+<div [ngSwitch]="this.curView.view">
+  <div *ngSwitchCase="'specific'">
+    <app-specific></app-specific>
+  </div>
+  <div *ngSwitchDefault>
+    <app-catalog></app-catalog>
+  </div>
+</div>

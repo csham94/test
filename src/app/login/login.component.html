@@ -1,0 +1,35 @@
+<div [ngSwitch]="this.token.auth">
+    <div *ngSwitchCase="true" class="dropdown">
+        <button type="button form-control" class="btn btn-secondary dropdown-toggle" id="dropdownLogin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pic
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownLogin">
+            <h6 class="dropdown-header">Your Name</h6>
+            <button class="dropdown-item" type="button" disabled>
+                <span class="oi oi-person">&nbsp;</span> Profile
+            </button>
+
+            <button class="dropdown-item" type="button" disabled>
+                <span class="oi oi-cog">&nbsp;</span> Settings
+            </button>
+
+            <button class="dropdown-item" type="button" (click)="logout()">
+                <span class="oi oi-account-logout">&nbsp;</span> Logout
+            </button>
+
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item" type="button" disabled>
+                Night mode &nbsp;&nbsp;<span class="oi oi-moon"></span>
+            </button>
+        </div>
+    </div>
+    <div *ngSwitchDefault>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#userModal">
+            Sign up
+        </button>
+
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal">
+            <span class="oi oi-account-login">&nbsp;</span> Log in
+        </button>
+    </div>
+</div>

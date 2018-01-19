@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 0%;
+    background-color: #28283e;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+#footer {
+    background-color: #14141f;
+    height: 60px;
+    color: #f2f2f2;
+}

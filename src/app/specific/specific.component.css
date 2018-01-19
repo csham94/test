@@ -1,0 +1,26 @@
+#specificView {
+    margin-top: 20px;
+}
+
+#createReply {
+    margin-right: 10px;
+}
+
+h4 {
+    color: #d9d9d9;
+}
+
+#btn button-success {
+    background-color: #a0a0c5;
+    border-color: #a0a0c5;
+}
+
+button:hover {
+    background-color: #3a3a5f;
+    border-color: #3a3a5f;
+}
+
+button:active {
+    background-color: #46466d;
+    border-color: #46466d;
+}
